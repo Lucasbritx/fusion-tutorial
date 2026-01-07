@@ -1,9 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Helmet } from "fusion-plugin-react-helmet-async";
+import fetch from "isomorphic-fetch";
 
 const Root = () => {
   const [todos, setTodos] = useState([]);
   const [inputText, setInputText] = useState("");
+
+  useEffect(() => {
+    fetch("/api/todos")
+      .then(async (res) => await res.json())
+      .then((res) => setTodos(res));
+  }, []);
 
   const handleOnKeydown = (e) => {
     if (e.key === "Enter") {
