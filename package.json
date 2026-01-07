@@ -1,0 +1,15 @@
+{
+  "name": "fusion-tutorial",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Lucas Xavier",
+  "license": "MIT",
+  "dependencies": {
+    "fusion-cli": "^2.39.1",
+    "fusion-core": "^2.11.0",
+    "fusion-react": "^4.8.7",
+    "fusion-tokens": "^3.0.2",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3"
+  }
+}
